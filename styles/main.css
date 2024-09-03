@@ -1,0 +1,94 @@
+.header {
+  background-color: aquamarine;
+  margin: 0;
+  border-width: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto Slab';
+  height: auto;
+}
+
+.footer {
+  background-color: plum;
+}
+
+body {
+  background-color: blanchedalmond;
+  margin: 0;
+  border-width: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto Slab';
+}
+
+.container {
+  display: flex;
+}
+
+.container-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.container-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebox {
+  min-width: 250px;
+  background-color: skyblue;
+  text-align: center;
+  font-family: 'Roboto Slab';
+}
+
+.middlebox {
+  background-color: khaki;
+  flex: 1;
+}
+
+.table {
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+}
+
+th {
+  height: 100px;
+  width: 100px;
+  border-width: 3px;
+  border-style: solid;
+  vertical-align: middle;
+  text-align: center;
+  font-family: 'Roboto Slab';
+}
+
+td {
+  font-size: 15px;
+}
+
+#pic1 {
+  background-image: url('../images/Human.png');
+  background-position: center;
+  background-size: cover;
+}
+
+#pic2 {
+  background-image: url('../images/Robot.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.blog-heading {
+  position: relative;
+  top: 30px;
+  border-width: 3px;
+  border-style: solid;
+  background-color: dodgerblue;
+}
+
+.menu-item {
+  margin: 5px 10px 5px 10px;
+  font-size: 15px;
+  font-weight: 800;
+}
