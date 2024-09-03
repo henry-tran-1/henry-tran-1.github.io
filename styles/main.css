@@ -8,10 +8,6 @@
   height: auto;
 }
 
-.footer {
-  background-color: plum;
-}
-
 body {
   background-color: blanchedalmond;
   margin: 0;
@@ -19,6 +15,10 @@ body {
   padding: 0;
   text-align: center;
   font-family: 'Roboto Slab';
+}
+
+footer {
+  background-color: plum;
 }
 
 .container {
@@ -29,12 +29,11 @@ body {
   display: flex;
   justify-content: center;
   background-color: lightsteelblue;
-  border-top-width: 2px;
-  border-bottom-width: 2px;
+  border-width: 2px 0 2px 0;
   border-style: solid;
 }
 
-.container-vertical {
+.container-heading {
   display: flex;
   flex-direction: column;
 }
@@ -42,6 +41,8 @@ body {
 .sidebox {
   width: 250px;
   height: auto;
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
   background-color: skyblue;
   text-align: center;
   font-family: 'Roboto Slab';
