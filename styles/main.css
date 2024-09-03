@@ -28,6 +28,10 @@ body {
 .container-menu {
   display: flex;
   justify-content: center;
+  background-color: lightsteelblue;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-style: solid;
 }
 
 .container-vertical {
@@ -36,7 +40,8 @@ body {
 }
 
 .sidebox {
-  min-width: 250px;
+  width: 250px;
+  height: auto;
   background-color: skyblue;
   text-align: center;
   font-family: 'Roboto Slab';
