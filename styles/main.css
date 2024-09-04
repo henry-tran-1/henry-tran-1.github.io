@@ -60,8 +60,8 @@ footer {
 }
 
 th {
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 110px;
   border-width: 3px;
   border-style: solid;
   vertical-align: middle;
@@ -83,20 +83,22 @@ ul {
 }
 
 #pic1 {
-  background-image: url('../images/Human.png');
+  background-image: url('../images/core.png');
   background-position: center;
   background-size: cover;
+  background-color: white;
 }
 
 #pic2 {
-  background-image: url('../images/Robot.png');
+  background-image: url('../images/tech.png');
   background-position: center;
   background-size: cover;
+  background-color: white;
 }
 
 .blog-heading {
   position: relative;
-  top: 30px;
+  top: 48px;
   border-width: 3px;
   border-style: solid;
   background-color: dodgerblue;
