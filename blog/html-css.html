@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Stories and Legends (PAGE title)</title>
+    <title>Box Model</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <link href="../styles/main.css" rel="stylesheet" type="text/css" />
@@ -26,19 +26,97 @@
       <p class="menu-item">Menu Button 3</p>
       <p class="menu-item">Menu Button 4</p>
     </div>
-    <div>
-      <p style="text-align: left;">
-        The box model is important to know about in web design because all HTML 
-        elements can be considered boxes. <br>
-        Each element is a box that consists of 
-        4 different layers or shells. These layers, in order are: 
-          <ul style="text-align: left;">
-            <li>Content</li>
-            <li>Padding</li>
-            <li>Border</li>
-            <li>Margin</li>
-          </ul>
+    <h2>The CSS Box Model</h2>
+    <div style="margin-left: 20px">
+      <p style="text-align: left">
+        The box model is important to know about in web design because all HTML
+        elements can be considered boxes. <br />
+        Each element is a box that consists of 4 different layers. These layers,
+        in order are:
       </p>
+      <div class="container">
+        <div style="margin-right: 20px">
+          <ul style="text-align: left">
+            <li>
+              <strong>Content </strong>(blue box):<br />
+              This is the area where your content is displayed, e.g. texts and
+              images.
+            </li>
+            <li>
+              <strong>Padding </strong>(green box):<br />
+              This is the transparent space between the content area and the
+              border. <br />
+              Any background colour applied to the element will also display
+              behind the padding space.
+            </li>
+            <li>
+              <strong>Border </strong>(yellow box):<br />
+              This is the border that wraps around the content and padding
+              space.<br />
+              It is situated between the padding and the margin.
+            </li>
+            <li>
+              <strong>Margin </strong>(orange box):<br />
+              The margin is the last layer and wraps around the other three
+              layers.<br />
+              It is an invisible space around the box, that will push away other
+              elements.<br />
+              This has no background.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <img
+            src="../images/box-model.png"
+            alt="Box Model"
+            width="400"
+            height="auto"
+          />
+        </div>
+      </div>
+    </div>
+    <div style="margin-left: 20px">
+      <p style="text-align: left">There are also two box models:</p>
+      <ul style="text-align: left">
+        <li>
+          <strong>Standard box model:</strong> width/height attributes
+          correspond to the content box, and then padding/borders are added on
+          top.
+        </li>
+        <li>
+          <strong>Alternate box model:</strong> width/height attributes
+          correspond to the total size of content, padding and border boxes
+          added together.
+        </li>
+      </ul>
+    </div>
+    <div
+      style="margin-left: 20px; margin-top: 50px; margin-right; margin-bottom: 0"
+    >
+      <p style="text-align: left">
+        How do the margins of two elements/boxes <strong>interact</strong> with
+        each other?
+      </p>
+      <div class="container">
+        <p style="max-width: 600px; margin-right: 20px; margin-top: 0">
+          If there are two boxes, each with a margin of 50px, they would overlap
+          as shown: the margins do not add up to make 100px of space.<br />
+          The elements can be as close to each other as they like, as long as
+          there's enough space between them to satisfy each of their margin
+          requirements. If there are two boxes with different margins, the space
+          between them would be equal to the largest margin of the two.<br />
+          I like to think of the margin attribute like a
+          <strong>person's personal space</strong>. If two people both had a
+          personal space of 2 metres, they would only have to be 2 metres away
+          from each other to make both people happy.
+        </p>
+        <img
+          src="../images/margin-interaction.png"
+          alt="Margin Interaction"
+          width="250"
+          height="auto"
+        />
+      </div>
     </div>
   </body>
 </html>
