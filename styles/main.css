@@ -99,9 +99,6 @@ ul {
 .blog-heading {
   position: relative;
   top: 48px;
-  border-width: 3px;
-  border-style: solid;
-  background-color: dodgerblue;
 }
 
 .menu-item {
