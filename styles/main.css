@@ -1,28 +1,35 @@
-.header {
-  background-color: aquamarine;
-  margin: 0;
-  border-width: 0;
-  padding: 0;
-  text-align: center;
+html {
   font-family: 'Roboto Slab';
-  height: auto;
 }
 
 body {
   background-color: blanchedalmond;
   margin: 0;
-  border-width: 0;
-  padding: 0;
-  text-align: center;
-  font-family: 'Roboto Slab';
+  text-align: ;
 }
 
 footer {
   background-color: plum;
 }
 
+a {
+  color: black;
+}
+
+.header {
+  background-color: aquamarine;
+  margin: 0;
+  text-align: center;
+  height: auto;
+}
+
 .container {
   display: flex;
+}
+
+.container-heading {
+  display: flex;
+  flex-direction: column;
 }
 
 .container-menu {
@@ -33,11 +40,6 @@ footer {
   border-style: solid;
 }
 
-.container-heading {
-  display: flex;
-  flex-direction: column;
-}
-
 .sidebox {
   width: 250px;
   height: auto;
@@ -45,12 +47,12 @@ footer {
   border-style: solid;
   background-color: skyblue;
   text-align: center;
-  font-family: 'Roboto Slab';
 }
 
 .middlebox {
   background-color: khaki;
   flex: 1;
+  text-align: center;
 }
 
 .table {
@@ -64,22 +66,27 @@ th {
   width: 110px;
   border-width: 3px;
   border-style: solid;
-  vertical-align: middle;
   text-align: center;
-  font-family: 'Roboto Slab';
 }
 
 td {
   font-size: 15px;
 }
 
-a {
-  color: black;
-}
-
 ul {
   text-align: center;
   list-style-position: inside;
+}
+
+.blog-heading {
+  position: relative;
+  top: 48px;
+}
+
+.menu-item {
+  margin: 5px 10px 5px 10px;
+  font-size: 15px;
+  font-weight: 800;
 }
 
 #pic1 {
@@ -94,15 +101,4 @@ ul {
   background-position: center;
   background-size: cover;
   background-color: white;
-}
-
-.blog-heading {
-  position: relative;
-  top: 48px;
-}
-
-.menu-item {
-  margin: 5px 10px 5px 10px;
-  font-size: 15px;
-  font-weight: 800;
 }
