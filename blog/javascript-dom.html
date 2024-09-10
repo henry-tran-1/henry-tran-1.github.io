@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Fundamentals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-menu">
+      <p class="menu-item">
+        <a href="../index.html">Home</a>
+      </p>
+      <p class="menu-item">
+        <a href="../core.html">Core Blog</a>
+      </p>
+      <p class="menu-item">
+        <a href="../tech.html">Tech Blog</a>
+      </p>
+      <p class="menu-item">Menu Button 3</p>
+      <p class="menu-item">Menu Button 4</p>
+    </div>
+    <h2 style="text-align: center">JS Fundamentals</h2>
+    <div style="margin-left: 20px">
+      <p style="text-align: left">
+        <strong>Relationship of Javascript to HTML and CSS</strong><br />
+        These three languages are used to write code that work together to
+        create a website page that has content (HTML), looks great (CSS), and is
+        interactive (Javascript).<br />
+        An analogy for these three components would be if a website was a car.
+        <ul style="text-align: left;">
+          <li>
+            The HTML would be the frame and structure of the car.            
+          </li>
+          <li>
+            CSS would be the paint, logo and other styling of the car.
+          </li>
+          <li>
+            And Javascript would be the engine, wheels and other parts that make the car run.
+          </li>
+        </ul>
+      </p>
+    </div>
+    <div style="margin-left: 20px">
+      <p style="text-align: left">
+        <strong>Control flow and Loops</strong><br />
+        Control flows describes the sequence in which a code is executed by a computer or browser.  
+        In programming this generally starts at the very top of the code, and then runs line by line down until the very bottom of the code. <br>
+        An example of control flow in real life would be following a cooking recipe.  A simple recipe for cooking eggs in a pan might be: 
+        <ol>
+          <li>Heat up pan</li>
+          <li>Crack eggs into pan</li>
+          <li>Serve eggs when cooked</li>
+        </ol>
+        The cooking instructions are meant to be followed in order.  If this recipe wasn't executed in the listed sequence, you may end up serving the eggs before you even cook them!<br><br>
+        Loops are parts of code that are repeated continually for a set amount of times, or until a certain condition is reached.<br>
+        An example of a loop in every day life would be cleaning your football boots.  The steps for cleaning your boots might be: 
+        <ol>
+          <li>Scrub them</li>
+          <li>Hose them down</li>
+          <li>Check if they are still dirty</li>
+        </ol>
+        In step 3, if they are still dirty you would repeat the instruction (for the second loop).  Only when they are no longer dirty would you exit this loop.
+      </p>
+    </div>
+    <div style="margin-left: 20px">
+      <p style="text-align: left">
+        <strong></strong><br />
+      </p>
+    </div>
+    <div style="margin-left: 20px">
+      <p style="text-align: left">
+        <strong>DOM - the Document Object Model</strong><br />
+        As mentioned above, a webpage is made up of 3 components: HTML, CSS and Javascript.  HTML and CSS comprise the content and look of a webpage.<br>
+        Javascript interacts with these 2 components and makes the webpage interactive by changing the HTML and CSS code. <br>
+        The DOM represents the webpage in a way that allows a programming language like Javascript to read and make changes to it.  The DOM represents the content and structure of a webpage in hierachical structure that is composed of a tree-like shape of connected nodes/elements (see below).
+        <div style="text-align: center;">
+          <img src="../images/dom.webp">
+        </div>
+        An example of Javascript making a website interactive would be if you wanted to change the colour of box on a webpage after a user clicks a button.<br>
+        When the user clicks the button (an event), you would use Javascript to search the document object for the element with the 'box' label and then change the code that describes its background colour.        
+      </p>
+    </div>        
+    <div style="margin-left: 20px">
+      <p style="text-align: left">
+        <strong>Arrays vs. Objects</strong><br />
+        <strong><em>Arrays</em></strong><br>
+        Arrays are used to store a list of similar items.<br>
+        <div>
+          <em>let fruits = ["apple", "banana", "cherry"]</em>
+        </div>
+        This would assign these fruit items to the variable fruits.<br><br>      
+        Each item has an index, which refers to what number on the list it is.<br>
+        To access a certain item in the array, you need to use its index number in square bracket notation:<br><br>
+        <div>
+          <em>let favouriteFruit = fruits[2]</em>
+        </div>
+        This assigns cherry to the favouriteFruit variable.
+    
+        (Don't forget indices start counting at 0)<br>
+
+        <br>
+        <em><strong>Objects</strong></em><br>
+        Objects are used to store data as properties.  These properties consist of key-value pairs: a key is the name of a property; and the value is its corresponding value.<br>
+        For example, if you stored your car as a Javascript object you may include the properties:
+        <div>
+          <em>let car = {manufacturer: "Toyota", model: "Swift", colour: "White"}]</em>
+        </div><br>
+        To access a certain property in the object, you could use dot notation: <br>
+        <div>
+          <em>let favouriteColour = car.colour</em><br>
+        </div>
+        This assigns the colour of the above car to the favouriteColour variable.<br><br>
+        Or you could use square bracket notation:<br>
+        <div>
+          <em>let favouriteColour = car["colour"]</em><br>
+        </div>
+        Which does the same as above. 
+
+      </p>
+    </div>
+    <div style="margin-left: 20px">
+      <p style="text-align: left"> 
+        <strong>Functions</strong><br />
+        A function is a sequence of code that can be reused again later in the program.  This is helpful because if you know you will need your program to do the same thing again 
+        later, you can write the function once and activate (call) this bit of code whenever it is needed.<br>
+        An example of this in real life would be combining salt and pepper into one shaker.  If you knew you always added salt and pepper together to your meal, having one shaker
+        that contained a mixture of both would save you from having to use two shakers separately each time.        
+      </p>
+    </div> 
+  </body>
+</html>
