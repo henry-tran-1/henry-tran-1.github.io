@@ -39,6 +39,11 @@ a {
   border-style: solid;
 }
 
+.paragraph {
+  text-align: left;
+  margin-left: 20px;
+}
+
 .sidebox {
   width: 250px;
   height: auto;
