@@ -63,14 +63,14 @@ export default function Projects() {
   // next and prev buttons for task manager carousel
   const handleTaskManagerNext = () => {
     setTaskManager((prev) => {
-      const newIndex = prev === 2 ? 0 : prev + 1
+      const newIndex = prev === 4 ? 0 : prev + 1
       setCurrentImageTM(`/images/task_manager_${newIndex}.png`)
       return newIndex
     })
   }
   const handleTaskManagerPrev = () => {
     setTaskManager((prev) => {
-      const newIndex = prev === 0 ? 2 : prev - 1
+      const newIndex = prev === 0 ? 4 : prev - 1
       setCurrentImageTM(`/images/task_manager_${newIndex}.png`)
       return newIndex
     })
@@ -309,12 +309,26 @@ export default function Projects() {
             </h2>
             <p className="text-left font-body text-base font-thin">
               Task manager is a simple productivity app designed to help users
-              stay organised and on track of their tasks.
+              stay organised and on track of their tasks. <br />
+              With aesthetics inspired by humble windows task manager.
             </p>
             <div className="my-2 flex w-full justify-start gap-4 font-body text-base font-semibold lg:mt-4">
-              <button className="rounded-md bg-gray-800 p-1 text-white hover:bg-amber-400 hover:text-gray-800">
+              <a
+                href="https://henry-task-manager.up.railway.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-gray-800 p-1 text-white hover:bg-amber-400 hover:text-gray-800 "
+              >
+                View Live
+              </a>
+              <a
+                href="https://github.com/henry-tran-1/task-manager"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-gray-800 p-1 text-white hover:bg-amber-400 hover:text-gray-800"
+              >
                 GitHub
-              </button>
+              </a>
             </div>
           </div>
           <div className="relative mx-2 rounded-md border-2 border-black lg:mx-0 lg:ml-10 lg:w-[350px]">
@@ -361,7 +375,7 @@ export default function Projects() {
                 X
               </button>
               <button
-                className="absolute right-2 top-1/2"
+                className="absolute right-2 top-[60%]"
                 onClick={handleTaskManagerNext}
               >
                 <img
@@ -371,7 +385,7 @@ export default function Projects() {
                 />
               </button>
               <button
-                className="absolute left-2 top-1/2"
+                className="absolute left-2 top-[60%]"
                 onClick={handleTaskManagerPrev}
               >
                 <img
