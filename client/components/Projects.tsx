@@ -101,6 +101,210 @@ export default function Projects() {
           projects
         </h1>
 
+        {/* Task Manager */}
+        <section className="my-20 flex w-full flex-col items-start justify-between lg:flex-row">
+          <div className="mr-2 lg:w-[450px]">
+            <h1 className="mb-4 text-left font-heading text-2xl">
+              Task Manager
+            </h1>
+            <h2 className="mb-4 text-left font-heading text-base font-thin lg:mb-8">
+              PERSONAL PROJECT
+            </h2>
+            <p className="text-left font-body text-base font-thin">
+              Task manager is a simple productivity app designed to help users
+              stay organised and on track of their tasks. <br />
+              With aesthetics inspired by the humble windows task manager.
+            </p>
+            <div className="my-2 flex w-full justify-start gap-4 font-body text-base font-semibold lg:mt-4">
+              <a
+                href="https://henry-task-manager.up.railway.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-gray-800 p-1 text-white hover:bg-amber-400 hover:text-gray-800 "
+              >
+                View Live
+              </a>
+              <a
+                href="https://github.com/henry-tran-1/task-manager"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-gray-800 p-1 text-white hover:bg-amber-400 hover:text-gray-800"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div className="relative mx-2 rounded-md border-2 border-black lg:mx-0 lg:ml-10 lg:w-[350px]">
+            <img
+              src={`/images/task_manager_${taskManager}.png`}
+              alt="task manager gallery"
+              className="cursor-pointer rounded-sm"
+              onClick={() => handleOpenImageTM()}
+            />
+            <button
+              className="absolute -right-10 top-1/2"
+              onClick={handleTaskManagerNext}
+            >
+              <img src="/images/right.svg" alt="next button" className="w-8" />
+            </button>
+            <button
+              className="absolute -left-10 top-1/2"
+              onClick={handleTaskManagerPrev}
+            >
+              <img
+                src="/images/left.svg"
+                alt="previous button"
+                className="w-8"
+              />
+            </button>
+          </div>
+        </section>
+
+        {isImageOpenTM && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+            onClick={() => setIsImageOpenTM(false)}
+          >
+            <div className="relative" onClick={(e) => e.stopPropagation()}>
+              <img
+                src={currentImageTM}
+                alt="enlarged view"
+                className="max-h-[90vh] max-w-[90vw] rounded-md"
+              />
+              <button
+                onClick={() => setIsImageOpenTM(false)}
+                className="absolute right-0 top-0 border-black p-4 text-2xl font-bold text-black"
+              >
+                X
+              </button>
+              <button
+                className="absolute right-2 top-[60%]"
+                onClick={handleTaskManagerNext}
+              >
+                <img
+                  src="/images/right.svg"
+                  alt="next button"
+                  className="w-8"
+                />
+              </button>
+              <button
+                className="absolute left-2 top-[60%]"
+                onClick={handleTaskManagerPrev}
+              >
+                <img
+                  src="/images/left.svg"
+                  alt="previous button"
+                  className="w-8"
+                />
+              </button>
+            </div>
+          </div>
+        )}
+
+        <hr className="my-4 w-3/5 border-t border-gray-600" />
+
+        {/* Bite Share */}
+        <section className="my-20 flex w-full flex-col-reverse items-start justify-between lg:flex-row">
+          <div className="relative mx-2 rounded-md border-2 border-black lg:mx-0 lg:ml-10 lg:w-[350px]">
+            <img
+              src={`/images/bite_share_${biteShare}.jpg`}
+              alt="bite share gallery"
+              className="cursor-pointer rounded-md"
+              onClick={() => handleOpenImageBS()}
+            />
+            <button
+              className="absolute -right-10 top-1/2"
+              onClick={handleBiteshareNext}
+            >
+              <img src="/images/right.svg" alt="next button" className="w-8" />
+            </button>
+            <button
+              className="absolute -left-10 top-1/2"
+              onClick={handleBitesharePrev}
+            >
+              <img
+                src="/images/left.svg"
+                alt="previous button"
+                className="w-8"
+              />
+            </button>
+          </div>
+          <div className="ml-2 lg:w-[450px]">
+            <h1 className="mb-4 text-left font-heading text-2xl">Bite Share</h1>
+            <h2 className="mb-4 text-left font-heading text-base font-thin lg:mb-8">
+              GROUP PROJECT (PRODUCT OWNER)
+            </h2>
+            <p className="text-left font-body text-base font-thin">
+              Bite Share is a web application designed to foster community
+              connections by matching individuals or organizations willing to
+              donate food with those in need. It features a static messaging
+              system for simple communication, built using RESTful API CRUD
+              operations.
+            </p>
+            <div className="my-2 flex w-full justify-start gap-4 font-body text-base font-semibold lg:mt-4">
+              {/* <a
+                href="https://bite-share-pohutukawa24.devacademy.nz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1 text-white bg-gray-800 rounded-md hover:bg-amber-400 hover:text-gray-800 "
+              >
+                View Live
+              </a> */}
+              <a
+                href="https://github.com/henry-tran-1/bite-share"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-gray-800 p-1 text-white hover:bg-amber-400 hover:text-gray-800"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {isImageOpenBS && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+            onClick={() => setIsImageOpenBS(false)}
+          >
+            <div className="relative" onClick={(e) => e.stopPropagation()}>
+              <img
+                src={currentImageBS}
+                alt="enlarged view"
+                className="max-h-[90vh] max-w-[90vw] rounded-md"
+              />
+              <button
+                onClick={() => setIsImageOpenBS(false)}
+                className="absolute right-0 top-0 border-black p-4 text-2xl font-bold text-black"
+              >
+                X
+              </button>
+              <button
+                className="absolute right-2 top-1/2"
+                onClick={handleBiteshareNext}
+              >
+                <img
+                  src="/images/right.svg"
+                  alt="next button"
+                  className="w-8"
+                />
+              </button>
+              <button
+                className="absolute left-2 top-1/2"
+                onClick={handleBitesharePrev}
+              >
+                <img
+                  src="/images/left.svg"
+                  alt="previous button"
+                  className="w-8"
+                />
+              </button>
+            </div>
+          </div>
+        )}
+
+        <hr className="my-4 w-3/5 border-t border-gray-600" />
+
         {/* Family Mapper */}
         <section className="mb-20 flex w-full flex-col items-start justify-between lg:flex-row">
           <div className="mr-2 lg:w-[450px]">
@@ -183,210 +387,6 @@ export default function Projects() {
               <button
                 className="absolute left-2 top-1/2"
                 onClick={handleFamilyMapperPrev}
-              >
-                <img
-                  src="/images/left.svg"
-                  alt="previous button"
-                  className="w-8"
-                />
-              </button>
-            </div>
-          </div>
-        )}
-
-        <hr className="my-4 w-3/5 border-t border-gray-600" />
-
-        {/* Bite Share */}
-        <section className="my-20 flex w-full flex-col-reverse items-start justify-between lg:flex-row">
-          <div className="relative mx-2 rounded-md border-2 border-black lg:mx-0 lg:ml-10 lg:w-[350px]">
-            <img
-              src={`/images/bite_share_${biteShare}.jpg`}
-              alt="bite share gallery"
-              className="cursor-pointer rounded-md"
-              onClick={() => handleOpenImageBS()}
-            />
-            <button
-              className="absolute -right-10 top-1/2"
-              onClick={handleBiteshareNext}
-            >
-              <img src="/images/right.svg" alt="next button" className="w-8" />
-            </button>
-            <button
-              className="absolute -left-10 top-1/2"
-              onClick={handleBitesharePrev}
-            >
-              <img
-                src="/images/left.svg"
-                alt="previous button"
-                className="w-8"
-              />
-            </button>
-          </div>
-          <div className="ml-2 lg:w-[450px]">
-            <h1 className="mb-4 text-left font-heading text-2xl">Bite Share</h1>
-            <h2 className="mb-4 text-left font-heading text-base font-thin lg:mb-8">
-              GROUP PROJECT (PRODUCT OWNER)
-            </h2>
-            <p className="text-left font-body text-base font-thin">
-              Bite Share is a web application designed to foster community
-              connections by matching individuals or organizations willing to
-              donate food with those in need. It features a static messaging
-              system for simple communication, built using RESTful API CRUD
-              operations.
-            </p>
-            <div className="my-2 flex w-full justify-start gap-4 font-body text-base font-semibold lg:mt-4">
-              <a
-                href="https://bite-share-pohutukawa24.devacademy.nz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-md bg-gray-800 p-1 text-white hover:bg-amber-400 hover:text-gray-800 "
-              >
-                View Live
-              </a>
-              <a
-                href="https://github.com/henry-tran-1/bite-share"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-md bg-gray-800 p-1 text-white hover:bg-amber-400 hover:text-gray-800"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {isImageOpenBS && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-            onClick={() => setIsImageOpenBS(false)}
-          >
-            <div className="relative" onClick={(e) => e.stopPropagation()}>
-              <img
-                src={currentImageBS}
-                alt="enlarged view"
-                className="max-h-[90vh] max-w-[90vw] rounded-md"
-              />
-              <button
-                onClick={() => setIsImageOpenBS(false)}
-                className="absolute right-0 top-0 border-black p-4 text-2xl font-bold text-black"
-              >
-                X
-              </button>
-              <button
-                className="absolute right-2 top-1/2"
-                onClick={handleBiteshareNext}
-              >
-                <img
-                  src="/images/right.svg"
-                  alt="next button"
-                  className="w-8"
-                />
-              </button>
-              <button
-                className="absolute left-2 top-1/2"
-                onClick={handleBitesharePrev}
-              >
-                <img
-                  src="/images/left.svg"
-                  alt="previous button"
-                  className="w-8"
-                />
-              </button>
-            </div>
-          </div>
-        )}
-
-        <hr className="my-4 w-3/5 border-t border-gray-600" />
-
-        {/* Task Manager */}
-        <section className="my-20 flex w-full flex-col items-start justify-between lg:flex-row">
-          <div className="mr-2 lg:w-[450px]">
-            <h1 className="mb-4 text-left font-heading text-2xl">
-              Task Manager (TBC)
-            </h1>
-            <h2 className="mb-4 text-left font-heading text-base font-thin lg:mb-8">
-              PERSONAL PROJECT
-            </h2>
-            <p className="text-left font-body text-base font-thin">
-              Task manager is a simple productivity app designed to help users
-              stay organised and on track of their tasks. <br />
-              With aesthetics inspired by humble windows task manager.
-            </p>
-            <div className="my-2 flex w-full justify-start gap-4 font-body text-base font-semibold lg:mt-4">
-              <a
-                href="https://henry-task-manager.up.railway.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-md bg-gray-800 p-1 text-white hover:bg-amber-400 hover:text-gray-800 "
-              >
-                View Live
-              </a>
-              <a
-                href="https://github.com/henry-tran-1/task-manager"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-md bg-gray-800 p-1 text-white hover:bg-amber-400 hover:text-gray-800"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
-          <div className="relative mx-2 rounded-md border-2 border-black lg:mx-0 lg:ml-10 lg:w-[350px]">
-            <img
-              src={`/images/task_manager_${taskManager}.png`}
-              alt="task manager gallery"
-              className="cursor-pointer rounded-sm"
-              onClick={() => handleOpenImageTM()}
-            />
-            <button
-              className="absolute -right-10 top-1/2"
-              onClick={handleTaskManagerNext}
-            >
-              <img src="/images/right.svg" alt="next button" className="w-8" />
-            </button>
-            <button
-              className="absolute -left-10 top-1/2"
-              onClick={handleTaskManagerPrev}
-            >
-              <img
-                src="/images/left.svg"
-                alt="previous button"
-                className="w-8"
-              />
-            </button>
-          </div>
-        </section>
-
-        {isImageOpenTM && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-            onClick={() => setIsImageOpenTM(false)}
-          >
-            <div className="relative" onClick={(e) => e.stopPropagation()}>
-              <img
-                src={currentImageTM}
-                alt="enlarged view"
-                className="max-h-[90vh] max-w-[90vw] rounded-md"
-              />
-              <button
-                onClick={() => setIsImageOpenTM(false)}
-                className="absolute right-0 top-0 border-black p-4 text-2xl font-bold text-black"
-              >
-                X
-              </button>
-              <button
-                className="absolute right-2 top-[60%]"
-                onClick={handleTaskManagerNext}
-              >
-                <img
-                  src="/images/right.svg"
-                  alt="next button"
-                  className="w-8"
-                />
-              </button>
-              <button
-                className="absolute left-2 top-[60%]"
-                onClick={handleTaskManagerPrev}
               >
                 <img
                   src="/images/left.svg"
